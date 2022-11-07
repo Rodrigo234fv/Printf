@@ -26,7 +26,7 @@ int	ft_printf(const char *s)
 	{
 		if (s[i - 1] == '%')
 		{
-			// use arg
+			// use variadic func
 		}
 		else
 		{
