@@ -1,42 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_print_ap.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rode-alb <rode-alb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 21:13:06 by rode-alb          #+#    #+#             */
-/*   Updated: 2022/11/07 21:13:06 by rode-alb         ###   ########.fr       */
+/*   Created: 2022/11/08 19:48:40 by rode-alb          #+#    #+#             */
+/*   Updated: 2022/11/08 19:48:40 by rode-alb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-/* Falta Variadic function para a parte do %
-So assim da para fzr o printf */
-
-int	ft_printf(const char *s, ...)
+int	ft_print_ap(char a, va_list ap)
 {
-	int		i;
-	int		print;
-	va_list	ap;
-
-	i = 0;
-	print = 0;
-	va_start (ap, s);
-	while (s[i])
-	{
-		if (s[i - 1] == '%')
-		{
-			print = print + ft_print_ap(s[i++], ap);
-		}
-		else
-		{
-			ft_putchar_fd(s[i], 1);
-			print++;
-		}
-		i++;
-	}
-	va_end (ap);
-	return (print);
+	if (a == 'c')
+		return (ft_printf_c(va_arg(ap, int), 1));
+	else if (a == 's')
+		return (ft_printf_s(va_arg(ap, char *)));
+	else if (a == 'p')
+		return (ft_printf_p(va_arg(ap, long int), "0123456789abcdef"));
+	else if (a == 'u')
+		return (ft_printf_u(va_arg(ap, unsigned int), "0123456789"));
+	else if (a == 'd' || a == 'i')
+		return (ft_printf_d(va_arg(ap, int), "0123456789"));
+	else if 
 }

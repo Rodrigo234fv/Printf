@@ -12,14 +12,12 @@
 
 # -*- Makefile -*-
 
-FILES = ft_printf.c ft_printf_d.c ft_printf_p.c \
-		ft_printf
+FILES = ft_printf.c ft_print_ap.c
 
 OBJS = $(FILES:.c=.o)
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-LIBFT
 
 MSG1 = @echo "Compiled ✔︎"
 MSG2 = @echo "Cleaned ✔︎"
@@ -33,10 +31,10 @@ $(NAME): $(OBJS)
 		$(MSG1)
 
 clean: 
-		rm -f $(OBJS) $(OBJS_BONUS)
+		rm -f $(OBJS)
 		$(MSG2)
 fclean: clean
 		rm -f $(NAME)
 re: fclean $(NAME)
 
-.PHONY: all, clean, fclean, re, bonus
+.PHONY: all, clean, fclean, re
