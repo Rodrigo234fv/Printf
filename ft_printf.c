@@ -6,7 +6,7 @@
 /*   By: rode-alb <rode-alb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 21:13:06 by rode-alb          #+#    #+#             */
-/*   Updated: 2022/11/09 18:44:30 by rode-alb         ###   ########.fr       */
+/*   Updated: 2022/11/09 19:31:27 by rode-alb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,9 @@ int	ft_printf(const char *s, ...)
 	return (print);
 }
 
-/* #include <stdio.h>
+#include <stdio.h>
 int main ()
 {
-	ft_printf("Bola");
-} */
+	char c = 'B';
+	ft_printf("%p", c);
+}
