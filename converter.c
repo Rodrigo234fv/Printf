@@ -1,41 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   converter.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rode-alb <rode-alb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/28 14:52:18 by rode-alb          #+#    #+#             */
-/*   Updated: 2022/10/31 17:49:18 by rode-alb         ###   ########.fr       */
+/*   Created: 2022/11/09 15:18:09 by rode-alb          #+#    #+#             */
+/*   Updated: 2022/11/09 15:18:09 by rode-alb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+int	converter(t_li n, t_li base_n, char *base)
 {
-	char	*str;
-	int		i;
-	int		k;
+	int	count;
 
-	i = 0;
-	k = 0;
-	str = (char *)malloc(sizeof (char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (!str)
-	{
-		return (0);
-	}
-	while (s1[i] != '\0')
-	{
-		str[i] = s1[i];
-		i++;
-	}
-	while (s2[k] != '\0')
-	{
-		str[i] = s2[k];
-		i++;
-		k++;
-	}
-	str[i] = '\0';
-	return (str);
+	count = 0;
+	if (n >= base_n)
+	count = converter (n / base_n, base_n, base);
+	write (1, &base[n % base_n], 1);
+	return (count + 1);
+}
+
+
+#include <stdio.h>
+int main ()
+{
+	printf("\n%i\n", converter(156, 16, "0123456789abcdef"));
 }

@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_printstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rode-alb <rode-alb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 15:58:27 by rode-alb          #+#    #+#             */
-/*   Updated: 2022/10/26 18:14:18 by rode-alb         ###   ########.fr       */
+/*   Created: 2022/11/09 14:49:33 by rode-alb          #+#    #+#             */
+/*   Updated: 2022/11/09 14:49:33 by rode-alb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_toupper(int ch)
+int	ft_printstr(char *str)
 {
-	if (ch > 96 && ch < 123)
+	int	i;
+
+	i = 0;
+	if (!str)
 	{
-		ch = ch - 32;
+		ft_putstr("(null)");
+		return (6);
 	}
-	return (ch);
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+	return (i);
 }
-
-/* #include <stdio.h>
-#include <ctype.h>
-int main() {
-    char c;
-
-    c = 'm';
-	printf("%c -> %c", c, ft_toupper(c));
-
-    c = 'D';
-    printf("\n%c -> %c", c, ft_toupper(c));
-
-    c = '9';
-    printf("\n%c -> %c", c, ft_toupper(c));
-    return 0;
-} */

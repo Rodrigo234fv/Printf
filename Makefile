@@ -16,7 +16,7 @@ FILES = ft_printf.c ft_print_ap.c
 
 OBJS = $(FILES:.c=.o)
 
-CC = gcc
+CC = clang
 CFLAGS = -Wall -Wextra -Werror
 
 MSG1 = @echo "Compiled ✔︎"

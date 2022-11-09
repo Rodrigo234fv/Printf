@@ -12,17 +12,22 @@
 
 #include "ft_printf.h"
 
-int	ft_print_ap(char a, va_list ap)
+int	ft_print_ap(va_list ap, const char a)
 {
 	if (a == 'c')
-		return (ft_printf_c(va_arg(ap, int), 1));
+		return (ft_printchar(va_arg(ap, int), 1));
 	else if (a == 's')
-		return (ft_printf_s(va_arg(ap, char *)));
+		return (ft_printstr(va_arg(ap, char *)));
 	else if (a == 'p')
-		return (ft_printf_p(va_arg(ap, long int), "0123456789abcdef"));
+		return (ft_print_ptr(va_arg(ap, unsigned long long )));
 	else if (a == 'u')
-		return (ft_printf_u(va_arg(ap, unsigned int), "0123456789"));
+		return (ft_print_unsigned(va_arg(ap, unsigned int)));
 	else if (a == 'd' || a == 'i')
-		return (ft_printf_d(va_arg(ap, int), "0123456789"));
-	else if 
+		return (ft_printnbr(va_arg(ap, int))); // ja ta
+	else if (a == 'x')
+		return (ft_printHexL(va_arg(ap, unsigned int)));
+	else if (a == 'X')
+		return (ft_printHexU(va_arg(ap, unsigned int)));
+	else if (a == '%')
+		return (ft_printpercent());
 }

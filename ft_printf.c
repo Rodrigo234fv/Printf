@@ -26,9 +26,10 @@ int	ft_printf(const char *s, ...)
 	va_start (ap, s);
 	while (s[i])
 	{
-		if (s[i - 1] == '%')
+		if (s[i] == '%')
 		{
-			print = print + ft_print_ap(s[i++], ap);
+			print += ft_print_ap(ap , s[i + 1]);
+			i++;
 		}
 		else
 		{
@@ -39,4 +40,10 @@ int	ft_printf(const char *s, ...)
 	}
 	va_end (ap);
 	return (print);
+}
+
+#include <stdio.h>
+int main ()
+{
+	ft_printf("Bola");
 }

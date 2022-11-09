@@ -13,9 +13,18 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <stdarg.h>
-# include "libft/libft.h"
+#include <stdarg.h>
+#include <stdio.h>
+#include <unistd.h>
+
+# define DEC "0123456789"
+# define HEXL "0123456789abcdef"
+# define HEXU "0123456789ABCDEF"
+typedef unsigned long long t_li;
+
 
 int		ft_printf(const char *s, ...);
+
+int	converter(t_li n, t_li base_n, char *base);
 
 #endif

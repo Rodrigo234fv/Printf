@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_printnbr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rode-alb <rode-alb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/02 14:47:29 by rode-alb          #+#    #+#             */
-/*   Updated: 2022/11/02 16:52:50 by rode-alb         ###   ########.fr       */
+/*   Created: 2022/11/09 14:53:58 by rode-alb          #+#    #+#             */
+/*   Updated: 2022/11/09 14:53:58 by rode-alb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Takes as a parameter a node and frees the memory of
-the node’s content using the function ’del’ given
-as a parameter and free the node. The memory of
-’next’ must not be freed.
- */
+#include "ft_printf.h"
 
-#include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void*))
+int ft_printnbr(int n)
 {
-	del(lst -> content);
-	free (lst);
+	int count;
+
+	count = 0;
+	if (n < 0)
+	{
+		count = write(1, "-", 1);
+		return (count + converter(((long long) n * (long long)-1), 10, DEC)); 
+	}
+	return (count + converter(n , 10, DEC));
 }
