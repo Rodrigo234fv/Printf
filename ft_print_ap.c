@@ -15,19 +15,20 @@
 int	ft_print_ap(va_list ap, const char a)
 {
 	if (a == 'c')
-		return (ft_printchar(va_arg(ap, int), 1));
+		return (ft_printchar(va_arg(ap, int)));
 	else if (a == 's')
 		return (ft_printstr(va_arg(ap, char *)));
 	else if (a == 'p')
 		return (ft_print_ptr(va_arg(ap, unsigned long long )));
-	else if (a == 'u')
+	else if (a == 'u') 
 		return (ft_print_unsigned(va_arg(ap, unsigned int)));
-	else if (a == 'd' || a == 'i')
-		return (ft_printnbr(va_arg(ap, int))); // ja ta
-	else if (a == 'x')
+	else if (a == 'd' || a == 'i') // ja ta
+		return (ft_printnbr(va_arg(ap, int)));
+	else if (a == 'x') // ja ta
 		return (ft_printHexL(va_arg(ap, unsigned int)));
-	else if (a == 'X')
+	else if (a == 'X') // ja ta 
 		return (ft_printHexU(va_arg(ap, unsigned int)));
-	else if (a == '%')
+	else if (a == '%') // ja ta
 		return (ft_printpercent());
 }
+

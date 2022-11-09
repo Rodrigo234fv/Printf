@@ -12,7 +12,8 @@
 
 # -*- Makefile -*-
 
-FILES = ft_printf.c ft_print_ap.c
+FILES = ft_printf.c ft_print_ap.c converter.c ft_print_ptr.c ft_print_unsigned.c \
+		ft_printHex.c ft_printnbr.c ft_printoercent.c ft_printstr.c
 
 OBJS = $(FILES:.c=.o)
 

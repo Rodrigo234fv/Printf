@@ -16,15 +16,33 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 # define DEC "0123456789"
 # define HEXL "0123456789abcdef"
 # define HEXU "0123456789ABCDEF"
 typedef unsigned long long t_li;
 
-
 int		ft_printf(const char *s, ...);
 
-int	converter(t_li n, t_li base_n, char *base);
+int		converter(t_li n, t_li base_n, char *base);
+
+int		ft_print_ap(va_list ap, const char a);
+
+int		ft_printchar(int c);
+
+int		ft_printstr(char *str);
+
+int		ft_print_ptr(unsigned long n);
+
+int		ft_print_unsigned(unsigned int n); // falta
+
+int		ft_printnbr(int n);
+
+int		ft_printHexL(unsigned int n);
+
+int		ft_printHexU(unsigned int n);
+
+int		ft_printpercent(void);
 
 #endif

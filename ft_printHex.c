@@ -17,7 +17,7 @@ int	ft_printHexL(unsigned int n)
 	return(converter(n, 16, HEXL));
 }
 
-int ft_printHexU(unsigned int n)
+int	ft_printHexU(unsigned int n)
 {
 	return(converter(n, 16, HEXU));
 }

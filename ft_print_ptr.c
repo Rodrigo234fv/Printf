@@ -14,3 +14,16 @@
 
 #include "ft_printf.h"
 
+int	ft_print_ptr(unsigned long n)
+{
+	int	count;
+
+	if (!n)
+	{
+	write (1, "(nil)", 5);
+	return (5);
+	}
+	write (1, "0x", 2);
+	count = converter(n, 16, HEXL);
+	return (count + 2);
+}

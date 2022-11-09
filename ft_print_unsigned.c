@@ -11,3 +11,12 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	ft_print_unsigned(unsigned int n)
+{
+	int	i;
+
+	i = 0;
+	i = n;
+	return (0);
+}

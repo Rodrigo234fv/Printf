@@ -13,14 +13,14 @@
 #include "ft_printf.h"
 
 
-int ft_printnbr(int n)
+int	ft_printnbr(int n)
 {
 	int count;
 
 	count = 0;
 	if (n < 0)
 	{
-		count = write(1, "-", 1);
+		count = write(1, '-', 1);
 		return (count + converter(((long long) n * (long long)-1), 10, DEC)); 
 	}
 	return (count + converter(n , 10, DEC));

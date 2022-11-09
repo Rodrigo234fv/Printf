@@ -24,8 +24,8 @@ int	converter(t_li n, t_li base_n, char *base)
 }
 
 
-#include <stdio.h>
+/* #include <stdio.h>
 int main ()
 {
 	printf("\n%i\n", converter(156, 16, "0123456789abcdef"));
-}
+} */
