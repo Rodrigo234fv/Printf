@@ -6,7 +6,7 @@
 /*   By: rode-alb <rode-alb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 21:13:06 by rode-alb          #+#    #+#             */
-/*   Updated: 2022/11/07 21:13:06 by rode-alb         ###   ########.fr       */
+/*   Updated: 2022/11/09 18:44:30 by rode-alb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ int	ft_printf(const char *s, ...)
 	{
 		if (s[i] == '%')
 		{
-			print += ft_print_ap(ap , s[i + 1]);
+			print += ft_print_ap(ap, s[i + 1]);
 			i++;
 		}
 		else
 		{
-			ft_putchar_fd(s[i], 1);
+			write(1, &s[i], 1);
 			print++;
 		}
 		i++;
@@ -42,8 +42,8 @@ int	ft_printf(const char *s, ...)
 	return (print);
 }
 
-#include <stdio.h>
+/* #include <stdio.h>
 int main ()
 {
 	ft_printf("Bola");
-}
+} */

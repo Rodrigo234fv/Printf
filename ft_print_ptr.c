@@ -6,7 +6,7 @@
 /*   By: rode-alb <rode-alb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 15:52:15 by rode-alb          #+#    #+#             */
-/*   Updated: 2022/11/09 15:52:15 by rode-alb         ###   ########.fr       */
+/*   Updated: 2022/11/09 19:10:30 by rode-alb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 #include "ft_printf.h"
 
-int	ft_print_ptr(unsigned long n)
+int	ft_print_ptr(t_li n)
 {
 	int	count;
 
 	if (!n)
 	{
-	write (1, "(nil)", 5);
-	return (5);
+		write(1, "(nil)", 5);
+		return (5);
 	}
 	write (1, "0x", 2);
 	count = converter(n, 16, HEXL);

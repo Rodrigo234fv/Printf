@@ -6,7 +6,7 @@
 /*   By: rode-alb <rode-alb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:49:33 by rode-alb          #+#    #+#             */
-/*   Updated: 2022/11/09 14:49:33 by rode-alb         ###   ########.fr       */
+/*   Updated: 2022/11/09 18:51:34 by rode-alb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_printstr(char *str)
 	i = 0;
 	if (!str)
 	{
-		write(1,"(null)", 6);
+		write(1, "(null)", 6);
 		return (6);
 	}
 	while (str[i])
