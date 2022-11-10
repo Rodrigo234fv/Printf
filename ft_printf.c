@@ -42,9 +42,9 @@ int	ft_printf(const char *s, ...)
 	return (print);
 }
 
-#include <stdio.h>
+/* #include <stdio.h>
 int main ()
 {
 	char c = 'B';
 	ft_printf("%p", c);
-}
+} */
