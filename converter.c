@@ -6,7 +6,7 @@
 /*   By: rode-alb <rode-alb@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 15:18:09 by rode-alb          #+#    #+#             */
-/*   Updated: 2022/11/09 17:50:30 by rode-alb         ###   ########.fr       */
+/*   Updated: 2022/11/11 17:17:14 by rode-alb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	converter(t_li n, t_li base_n, char *base)
 	return (count + 1);
 }
 
-/* #include <stdio.h>
+#include <stdio.h>
 int main ()
 {
 	printf("\n%i\n", converter(156, 16, "0123456789abcdef"));
-} */
+} 
